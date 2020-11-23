@@ -1,5 +1,6 @@
 Texto de teste
 
-git init
-git add *
-git status
+git init  - inicia o git na pasta 
+git add * - adiciona todos os arquivos da pasta ao commit
+git status - monitora o status dos arquivos do branch
+git commit -m "Primeiro commit"
