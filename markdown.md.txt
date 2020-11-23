@@ -27,3 +27,5 @@ git remote add origin https://github.com/angelaleitte/aulasgit.git   --> seta a 
 git remote -v ---> lista os branchs 
 
 git push origin master
+
+git pull origin master  --> sincroniza o repositorio local com o remoto caso haja arquivos diferentes no rep remoto
