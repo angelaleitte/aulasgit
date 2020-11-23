@@ -4,3 +4,26 @@ git init  - inicia o git na pasta
 git add * - adiciona todos os arquivos da pasta ao commit
 git status - monitora o status dos arquivos do branch
 git commit -m "Primeiro commit"
+
+
+Quais são os 4 estágios de arquivos dentro do git?
+---> Untracked, Unmodified, Modified e Staged.
+
+
+echo "# aulasgit" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/angelaleitte/aulasgit.git
+git push -u origin master
+
+
+git config --list   -- lista as configurações do seu git
+git config --global --unset user.email --> apaga a configuração de e-mail 
+git config --global user.email "angela-leitte@hotmail.com" --> e se digitado novamente vc consegue reconfigurar
+
+git remote add origin https://github.com/angelaleitte/aulasgit.git   --> seta a url para subir os arquivos
+git remote -v ---> lista os branchs 
+
+git push origin master
