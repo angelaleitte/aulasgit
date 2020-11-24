@@ -1,0 +1,29 @@
+ 
+select fk_id_cliente_evento, c.nome_cliente, count(fk_id_cliente_evento) as qtde from convidados inner join cliente as c on fk_id_cliente_evento = id_cliente group by fk_id_cliente_evento;
+
+
+<?php
+$fruits_list = array('Orange',  'Apple', ' Banana', 'Cherry', ' Banana');
+$result = array_unique($fruits_list);
+print_r($result);
+?>
+  
+Output:
+
+Array ( [0] => Orange [1] => Apple [2] => Banana [3] => Cherry ) 
+
+
+
+array_count_values()
+<?php
+$array = array(1, "ola", 1, "mundo", "ola");
+array_count_values($array);
+?>
+
+Array
+(
+    [1] => 2
+    [ola] => 2
+    [mundo] => 1
+)
+

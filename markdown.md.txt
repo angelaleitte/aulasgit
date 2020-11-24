@@ -32,3 +32,19 @@ git pull origin master  --> sincroniza o repositorio local com o remoto caso haj
 
 
 git clone https://github.com/angelaleitte/aulasgit.git  --> baixa o repositório
+
+
+git push : envia alterações locais para o servidor ( remote )
+
+git reset --hard HEAD~1 : desfaz commit e perde as alterações nos arquivos
+
+git stash : armazena alterações na pilha para uso posterior
+
+git clone: obtém repositório do servidor para a maquina local
+
+git reset --soft HEAD~1: desfaz commit e não perde alterações nos arquivos
+
+git-fetch - para efetuar o download dos commits de um repositório remoto para o repositório local
+Fetch - Download sem merge.
+Pull - é um fetch com merge dos arquivos locais.
+
