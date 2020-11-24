@@ -48,3 +48,5 @@ git-fetch - para efetuar o download dos commits de um repositório remoto para o
 Fetch - Download sem merge.
 Pull - é um fetch com merge dos arquivos locais.
 
+
+
