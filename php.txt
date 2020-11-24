@@ -9,11 +9,10 @@ on a.key = B.key
 where a.key is null
 or b.key is null
 
-<<<<<<< HEAD
+
 ver em: https://blog.masterdaweb.com/wp-content/uploads/2015/08/inner-join-left-join-outer-join.png
 
-=======
->>>>>>> f59b07e7362f79c703cd6d941576c2f080eb66ff
+
 <?php
 $fruits_list = array('Orange',  'Apple', ' Banana', 'Cherry', ' Banana');
 $result = array_unique($fruits_list);
