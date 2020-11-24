@@ -2,6 +2,13 @@
 select fk_id_cliente_evento, c.nome_cliente, count(fk_id_cliente_evento) as qtde from convidados inner join cliente as c on fk_id_cliente_evento = id_cliente group by fk_id_cliente_evento;
 
 
+select <select_list>
+from tabelaA 
+full outer joim tabelaB
+on a.key = B.key
+where a.key is null
+or b.key is null
+
 <?php
 $fruits_list = array('Orange',  'Apple', ' Banana', 'Cherry', ' Banana');
 $result = array_unique($fruits_list);
