@@ -1,0 +1,117 @@
+///COM JAVASCRIPT
+
+var excluirTaxas = document.querySelectorAll('.veiculoExcluirTaxa');
+console.log('Qtde Taxas: '+excluirTaxas.length);
+
+for(var z = 0; z < excluirTaxas.length; z++){
+    excluirTaxas[z].addEventListener('click', function(e){
+        e.preventDefault();
+
+        
+        
+        var veiculo  = this.getAttribute('data-prefixo');
+        var empresa = this.getAttribute('data-empresa');
+        var filial = this.getAttribute('data-filial');
+        var codTaxa = this.getAttribute('data-taxa');
+        var  dataInicial = this.getAttribute('data-dinicial');
+        var dataFinal = this.getAttribute('data-dfinal');
+        var valorTaxa = this.getAttribute('data-valortaxa');
+        var elemento = $(this).parent().parent();
+
+        if(confirm('Você realmente deseja excluir esta taxa?')){
+
+            var ajax = new XMLHttpRequest();                             
+                    //console.log("veiculo="+veiculo+"&empresa="+empresa+"&filial="+filial+"&taxa="+valorTaxa+"&datainicial="+dataInicial+"&datafinal="+dataFinal+"&codtaxa="+codTaxa);
+                    ajax.open("GET", "veiculos_excluir_taxas_ajax.php?prefixo="+veiculo+"&empresa="+empresa+"&filial="+filial+"&valortaxa="+valorTaxa+"&dinicial="+dataInicial+"&dfinal="+dataFinal+"&taxa="+codTaxa, true);
+            
+                        ajax.onreadystatechange = function(){            
+                        if(ajax.readyState == 4){
+                                if(ajax.status == 200){
+                                //resposta.innerHTML = ajax.responseText;
+                                
+                                var jsontext = ajax.responseText;
+                                //var msg = JSON.parse(jsontext);
+
+                                console.log(jsontext);
+
+                                //alert('Taxa excluida com sucesso!');
+                                
+                                $(elemento).fadeOut();                               
+
+                                
+                                }else{
+                                resposta.innerHTML = "Houve um erro na conexão ajax" + ajax.statusText;
+                                }
+                        }
+                    };
+                    ajax.send(null); 
+        }
+    });
+}
+
+
+
+
+
+
+
+/// COM JQUERY
+ $('#form1').submit(function(e){
+               e.preventDefault();
+               var formulario = $(this);
+               var retorno = inserirFormulario(formulario)
+           });
+
+           function inserirFormulario(dados){
+               $.ajax({
+                   type: "POST",
+                   data: dados.serialize(),
+                   url: "veiculos_cadastrar_ajax.php",
+                   datatype: "json",
+                   async: false
+               }).then(sucesso,falha);                      
+
+               function sucesso(data){
+                     console.log(data);
+                     $sucesso = $.parseJSON(data)["sucesso"];
+                     $mensagem = $.parseJSON(data)["mensagem"];
+                     $("#mensagem").show().fadeOut().fadeIn();
+                     //$("#mensagem").css('display','block');                   
+
+                     if($sucesso){
+                         //alert('success');
+                         $("#mensagem").html('<p class="sucess">'+$mensagem+'</p>');
+                         $(".divSim").css("display","block");
+                         
+                        
+                     }else{
+                         //alert('erro');
+                         $("#mensagem").html('<p class="error">'+$mensagem+'</p>');
+                     }
+               }
+
+               function falha(){
+                 //console.log("erro");
+               }
+
+           }  
+           
+           
+
+
+//LOAD DE ARQUIVO DENTRO DE DIV COM JQUERY
+<script>
+        $('#veiculo').change(function(){
+            $('#empresaFilial').load('<?php echo $path_parts['dirname']?>/servicos/veiculos/filtro_linha_veic.php?prefixo_vei='+$('#veiculo').val()).fadeOut("fast").fadeIn("slow");
+                //alert('Test!');
+        });
+</script>
+
+
+//FORMDATA DO JAVSCRIPT É EQUIVALENTE AO SERIALIZE JQUERY
+var form = document.querySelector('form');
+var data = new FormData(form);
+
+console.log(data);
+
+
