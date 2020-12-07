@@ -115,3 +115,9 @@ var data = new FormData(form);
 console.log(data);
 
 
+
+
+ALERT EXCLUIR
+ <a style='color:#c94e4e;'href="#" onclick="javascript: if(confirm('Você realmente deseja excluir este aproveitamento?'))location.href='horario_aproveitamento_excluir_ajax.php?cod_lin=<?php echo $aproveito['COD_LIN'];?>&codfil_lin=<?php echo $aproveito['CODFIL_LIN'];?>&codemp_lin=<?php echo $aproveito['CODEMP_LIN'];?>&horario_horapr=<?php echo $aproveito['HORARIO_HORAPR'];?>&sentido_horapr=<?php echo $aproveito['SENTIDO_HORAPR'];?>&serv_horapr=<?php echo $aproveito['SERV_HORAPR'];?>&tphor_horapr=<?php echo $aproveito['TPHOR_HORAPR'];?>&cod_lin_horapr=<?php echo $aproveito['COD_LIN_HORAPR'];?>&codemp_lin_horapr=<?php echo $aproveito['CODEMP_LIN_HORAPR'];?>&codfil_lin_horapr=<?php echo $aproveito['CODFIL_LIN_HORAPR'];?>&horario_horapr2=<?php echo $aproveito['HORARIO_HORAPR2'];?>'" data-toggle="tooltip" data-placement="left" alt="EXCLUIR" title="EXCLUIR" ><i class='fas fa-times' style='color:#c00;'></i></a>
+
+
