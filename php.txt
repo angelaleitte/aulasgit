@@ -1,4 +1,7 @@
- 
+Gera uma string de consulta codificada por URL a partir da matriz associativa (ou indexada) fornecida.
+https://www.php.net/manual/en/function.http-build-query.php
+_________________________________________________________
+
 select fk_id_cliente_evento, c.nome_cliente, count(fk_id_cliente_evento) as qtde from convidados inner join cliente as c on fk_id_cliente_evento = id_cliente group by fk_id_cliente_evento;
 
 
