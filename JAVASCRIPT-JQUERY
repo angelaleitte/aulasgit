@@ -1,3 +1,46 @@
+
+COMANDOS ////////////////////////////////////////
+
+var paragrafo = document.createElement('p') //CRIA UM ELELEMTNO
+paragrafo.innerHtml = 'Teste de parágrafo' //ACRESCENTA TEXTO DENTRO DO PARAGRAFO CRIADO
+
+var imagem = document.createElement('img')
+img.src = 'pedra.png'
+
+document.querySelector('.formulario').appendChild(paragrafo) //ADICIONA UM ELEMENTO 'PARAGRAFO' Á DIVI FORMULÁRIO
+document.querySelector('.formulario').removeChild(paragrafo) //REMOVE A DIV CRIADA
+
+document.querySelector('.formulario').childNodes //EXIBE OS NÓS DE DENTRO DO ELEMENTO
+
+document.body.childNodes //lista a lista de elemtos bo body
+
+document.querySelector('h2').parentNode //mostra o elemento pai
+document.querySelector('h2').parentNode.parentNode //mostra o elemento pai do pai e assim por diante
+
+document.querySelector('h2').setAttribute('class', 'nomeDaClasse') //insere uma classe no element h2
+
+document.querySelector('h2').removeAttribute('class', 'nomeDaClasse') //remove o classe do h2
+
+document.querySelector('#exemplo').getAttribute('data-id') //pega o conteudo do elemento  data-id do elemento com id exemmplo
+
+
+var texto = document.createTextNode('Teste de nó') //cria um nó de texto
+document.querySelector('h2').appendChild(texto)  //adiciona o nó de texto ao elemento h2
+
+document.querySelector('h2').textContent = 'Troquei o texto' //altera o texto de um elemento
+
+<ul>
+ <li>Laranja</li>
+ <li>Limão</li>
+</ul>
+
+itens = document.querySelector('ul').children // retorna as li deste item, ou seja, as filhas do item
+elemento = document.createElement('li')
+elemento.textContent = "Banana"
+itens.insertBefore('elemento', itens[0]) //irá inserir o item elemento antes do nó 0
+
+
+
 ///COM JAVASCRIPT
 
 var excluirTaxas = document.querySelectorAll('.veiculoExcluirTaxa');
