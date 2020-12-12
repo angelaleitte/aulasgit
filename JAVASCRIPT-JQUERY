@@ -39,6 +39,10 @@ elemento = document.createElement('li')
 elemento.textContent = "Banana"
 itens.insertBefore('elemento', itens[0]) //irá inserir o item elemento antes do nó 0
 
+nome = 'Angela Leite'
+typeof(nome) //retorna o tipo da variável
+
+
 
 
 ///COM JAVASCRIPT
