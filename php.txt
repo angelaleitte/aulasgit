@@ -85,4 +85,6 @@ menu --------------------
             </div>
           </li>
         </ul>
+        
+        if(window.innerWidth == 1707){document.querySelector(".listaAnotacoes").style.height = "500px"}
 
