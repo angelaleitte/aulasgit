@@ -46,6 +46,19 @@ Array
 )
 
 
+______________________________________________
+$sql = "SELECT * FROM vsb.usuarios where email_usu = '$email' and senha_usu='$senha'";
+        echo $sql;
+        $sql = $pdo->query($sql);
+        $sql_dados = $sql->fetch(PDO::FETCH_ASSOC); 
+        $sql_dados_contar = count($sql_dados);
+
+        echo "<pre>";
+        print_r($sql_dados);
+        echo "</pre>";
+___________________________________________
+
+
 menu --------------------
 
 <ul class="navbar-nav ml-auto">     
